@@ -411,9 +411,10 @@ a {
   .hero__title {
     font-size: 90px;
   }
-  @media (max-width: 600px) {
+}
+@media (max-width: 576px) {
   .hero__title {
-    z-index: 100;
+    z-index: 999;
   }
 }
 .hero__hello {
