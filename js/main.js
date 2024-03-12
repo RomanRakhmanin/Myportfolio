@@ -258,6 +258,30 @@ if (laptopScreen) {
     duration: 2,
     scale: 0.7
   });
+  tl.to('.burger', {
+    scrollTrigger: {
+      trigger: '.about',
+      start: '-250px 0',
+      scrub: true
+    },
+    color: "#000"
+  });
+  tl.to('.burger', {
+    scrollTrigger: {
+      trigger: '.info',
+      start: '-100px top',
+      scrub: true
+    },
+    color: "#fff"
+  });
+  tl.to('.burger', {
+    scrollTrigger: {
+      trigger: '.works',
+      start: '-150px 0',
+      scrub: true
+    },
+    color: "#000"
+  });
   const menu_items = document.querySelector('.nav__list');
   gsap_all__WEBPACK_IMPORTED_MODULE_0__.gsap.from(menu_items.children, {
     opacity: 0,
@@ -336,11 +360,9 @@ __webpack_require__.r(__webpack_exports__);
     if (menu?.classList.contains('menu--active')) {
       burger?.setAttribute('aria-expanded', 'true');
       burger?.setAttribute('aria-label', 'Закрыть меню');
-      (0,_functions_disable_scroll__WEBPACK_IMPORTED_MODULE_0__.disableScroll)();
     } else {
       burger?.setAttribute('aria-expanded', 'false');
       burger?.setAttribute('aria-label', 'Открыть меню');
-      (0,_functions_enable_scroll__WEBPACK_IMPORTED_MODULE_1__.enableScroll)();
     }
   });
   overlay?.addEventListener('click', () => {
@@ -348,7 +370,6 @@ __webpack_require__.r(__webpack_exports__);
     burger?.setAttribute('aria-label', 'Открыть меню');
     burger.classList.remove('burger--active');
     menu.classList.remove('menu--active');
-    (0,_functions_enable_scroll__WEBPACK_IMPORTED_MODULE_1__.enableScroll)();
   });
   menuItems?.forEach(el => {
     el.addEventListener('click', () => {
@@ -356,7 +377,6 @@ __webpack_require__.r(__webpack_exports__);
       burger?.setAttribute('aria-label', 'Открыть меню');
       burger.classList.remove('burger--active');
       menu.classList.remove('menu--active');
-      (0,_functions_enable_scroll__WEBPACK_IMPORTED_MODULE_1__.enableScroll)();
     });
   });
 })();

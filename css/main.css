@@ -55,6 +55,7 @@
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -185,7 +186,8 @@ a {
   --burger-width: 30px;
   --burger-height: 30px;
   --burger-line-height: 2px;
-  position: relative;
+  position: fixed;
+  right: 15px;
   border: none;
   padding: 0;
   width: var(--burger-width);
